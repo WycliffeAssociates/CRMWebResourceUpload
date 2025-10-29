@@ -24,10 +24,10 @@ jobs:
       run: nuget restore CRMWebResourceUpload.sln
     
     - name: Build solution
-      run: msbuild CRMWebResourceUpload.sln /p:Configuration=Release /p:Platform="Any CPU" /v:minimal
+      run: msbuild CRMWebResourceUpload.sln /p:Configuration=Release /p:Platform="AnyCPU" /v:minimal
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: CRMWebResourceUpload-${{ github.sha }}
-        path: CRMWebResourceUpload/bin/Release/
+        path: CRMWebResourceUpload/bin/Release/**
