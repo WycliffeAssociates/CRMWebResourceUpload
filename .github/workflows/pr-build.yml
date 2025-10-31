@@ -25,4 +25,4 @@ jobs:
       run: nuget restore CRMWebResourceUpload.sln
     
     - name: Build solution
-      run: msbuild CRMWebResourceUpload.sln /p:Configuration=Release /p:Platform="AnyCPU" /v:minimal
+      run: msbuild CRMWebResourceUpload.sln /p:Configuration=Release /p:Platform="Any CPU" /v:minimal
